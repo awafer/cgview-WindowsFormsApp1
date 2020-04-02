@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
                 try
                 {
                     var sr = new StreamReader(openFileDialog1.FileName);
-                    //SetText(sr.ReadToEnd());
+                    label1_SetText(Path.GetFileName(openFileDialog1.FileName));
                 }
                 catch (SecurityException ex)
                 {
@@ -37,7 +37,17 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void label1_SetText(string text)
+        {
+            label1.Text = text;
+        }
+
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
